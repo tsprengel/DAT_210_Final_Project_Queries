@@ -1,0 +1,10 @@
+UPDATE primary_owner
+SET StreetAddress = '723 Birch Ave.'
+WHERE PrimaryOwnerKey = '00002'
+
+DELETE FROM primary_owner
+WHERE PrimaryOwnerKey = '00003'
+
+SELECT p.name, po.FirstName, po.LastName, po.Phone, bs.ArrivalDateTime, bs.DepartureDateTime, bs.KennelAssignment FROM pet p
+join primary_owner po on po.PrimaryOwnerKey = p.PrimaryOwnerKey
+join booking_schedule bs on bs.PetKey = p.PetKey
