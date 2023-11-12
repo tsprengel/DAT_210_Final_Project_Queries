@@ -1,0 +1,203 @@
+INSERT INTO primary_owner(PrimaryOwnerKey,
+FirstName,
+LastName,
+Email,
+Phone,
+StreetAddress,
+AptNumber,
+City,
+State,
+Zip)
+VALUES(
+'00001',
+'Jane',
+'Doe',
+'JaneDoe@gmail.com',
+'123 Main St.',
+'',
+'Hometown',
+'New York',
+'00001')
+
+INSERT INTO additional_owner(
+AdditionalOwnerKey, 
+PrimaryOwnerKey,
+FirstName,
+LastName,
+Email,
+Phone,
+StreetAddress,
+AptSuiteNumber,
+City,
+State,
+Zip)
+VALUES(
+'00001',
+'00001',
+'John',
+'Doe',
+'JohnDoe@gmail.com',
+'5556789013',
+'123 Main St.',
+'',
+'Hometown',
+'New York',
+'00001')
+
+INSERT INTO pet(
+PetKey,
+PrimaryOwnerKey,
+Name,
+Age,
+Sex,
+Breed,
+Weight,
+PetLicenseID,
+PrimaryVeterinarianKey)
+VALUES (
+'00001',
+'00001',
+'Bella',
+'4',
+'F',
+'Poodle',
+'60',
+'',
+'00001')
+
+INSERT INTO pet(
+PetKey,
+PrimaryOwnerKey,
+Name,
+Age,
+Sex,
+Breed,
+Weight,
+PetLicenseID,
+PrimaryVeterinarianKey)
+VALUES (
+'00002',
+'00001',
+'Huck',
+'2',
+'M',
+'Golden Retriever',
+'65',
+'',
+'00001')
+
+INSERT INTO allergies(
+AllergiesKey,
+PetKey,
+Allergy)
+VALUES(
+'00001',
+'00001',
+'Chicken')
+
+INSERT INTO booking_schedule(
+BookingScheduleKey,
+PrimaryOwnerKey,
+PetKey,
+ArrivalDateTime,
+DepartureDateTime,
+KennelAssignment)
+VALUES(
+'00001',
+'00001',
+'00001',
+'2023-10-10 8:00:00',
+'2023-10-15 12:00:00',
+'1')
+
+INSERT INTO booking_schedule(
+BookingScheduleKey,
+PrimaryOwnerKey,
+PetKey,
+ArrivalDateTime,
+DepartureDateTime,
+KennelAssignment)
+VALUES(
+'00001',
+'00001',
+'00002',
+'2023-10-10 8:00:00',
+'2023-10-15 12:00:00',
+'2')
+
+INSERT INTO booking_notes(
+BookingNotesKey,
+BookingScheduleKey,
+BookingNotes)
+VALUES(
+'00001',
+'00001',
+'Bella had a great time today!')
+
+INSERT INTO feeding_schedule(
+FeedingScheduleKey,
+PetKey,
+NumberMeals,
+Morning,
+Afternoon,
+Evening,
+Night)
+VALUES (
+'00001',
+'00001',
+'2',
+'1',
+'0',
+'1',
+'0')
+
+INSERT INTO feeding_schedule(
+FeedingScheduleKey,
+PetKey,
+NumberMeals,
+Morning,
+Afternoon,
+Evening,
+Night)
+VALUES (
+'00002',
+'00002',
+'2',
+'1',
+'0',
+'1',
+'0')
+
+INSERT INTO vaccinations(
+PetKey,
+Rabies,
+RabiesDate,
+Distemper,
+DistemperDate,
+Deworm,
+DewormDate)
+VALUES (
+'00001',
+'1',
+'2023-06-13',
+'1',
+'2023-06-13',
+'1',
+'2023-06-13')
+
+INSERT INTO vaccinations(
+PetKey,
+Rabies,
+RabiesDate,
+Distemper,
+DistemperDate,
+Deworm,
+DewormDate)
+VALUES (
+'00002',
+'1',
+'2023-06-13',
+'1',
+'2023-06-13',
+'1',
+'2023-06-13')
